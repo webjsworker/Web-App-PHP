@@ -1,0 +1,10 @@
+Options -Indexes
+#<Files "bd.json*">
+#    Require all denied
+#</Files>
+<FilesMatch "(log|json)$">
+    Require all denied
+    #Order Deny,Allow
+    #Deny from all
+   # Allow from 97.84.88.14
+    </FilesMatch>
