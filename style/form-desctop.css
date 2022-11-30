@@ -1,0 +1,66 @@
+.singin, .singup{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: 0;
+    background-color: rgb(99, 99, 100);
+   
+}
+.singin_container, .singup_container{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+}
+.form{
+   display: relative;
+   width: 80%;
+   height: 300px;
+   padding: 10px;
+   border-radius: 10px;
+   background-color: white; 
+}
+.form div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10px 0;
+   }
+.button{
+    width: 60px;
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    color: white ;
+    background-color: rgb(82, 79, 79);
+    transition-duration: 0.5s;
+}
+.button:hover{
+    background-color: rgb(101, 98, 98);
+  }
+.close{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    color: rgb(47, 45, 45);
+}
+.close span{
+    margin: 10px;
+  }
+
+.close span:hover{
+    cursor: pointer;
+}
+ 
+.validationError {
+    border-color:   red;
+  } 
+
+.message span{
+    display: none;
+    color: red;
+}  
