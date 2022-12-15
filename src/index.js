@@ -49,13 +49,21 @@ let GetElement = (elem) => {
 }
 
 async function PostUser() {
+     
     let request = await fetch('route.php', {
         method: 'POST',
         body: new FormData(SUBMITSINGUP[1])
 
     });
-    //let result = await request.json();
-    //console.log(result)
+    let result = await request.json();
+    console.log(result)
+    if(result == "User has been created"){
+      messageUpOn()  ;
+      SINGUPFORM.style.display = 'block'
+    } else {
+        messageUpOff()
+        SINGUPFORM.style.display = 'none'
+    } 
 }
 
 let SubmitFormUp = (event) => {
@@ -67,7 +75,7 @@ let SubmitFormUp = (event) => {
         CheckEmail(InEmail) &&
         Checklogin(InName)) {
         PostUser()
-        SINGUPFORM.style.display = 'none'
+       // SINGUPFORM.style.display = 'none'
     }
 }
 async function GetUser() {
@@ -76,13 +84,15 @@ async function GetUser() {
     let password = form.get('password')
     let request = await fetch(`route.php/?login=${login}&password=${password}`, {
         method: 'GET',
-        //body: new FormData(SUBMITSINGUP[0])
     });
+    console.log(request)
     let result = await request.json();
     if (result == 'not exist') {
         MessageOn()
         return true
     } else {
+        localStorage.name = result
+        localStorage.id = document.cookie
         welcomeMesageOn("Hello " + result)
         MessageOff()
         SINGINFORM.style.display = 'none'

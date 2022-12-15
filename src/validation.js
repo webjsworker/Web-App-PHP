@@ -1,4 +1,5 @@
 const Message = document.querySelector('.message').getElementsByTagName('span')
+const MessageUP = document.querySelector('.messageUp').getElementsByTagName('span')
 const inputItems = document.querySelectorAll('input');
 const Authlogin = inputItems[0];
 const AuthPassword = inputItems[1];
@@ -22,6 +23,13 @@ function MessageOn() {
 function MessageOff() {
     Message[0].style.display = 'none'
 }
+function messageUpOn(){
+    MessageUP[0].style.display = 'block'
+}
+function messageUpOff(){
+    MessageUP[0].style.display = 'none'
+}
+
 function AddClassError(elem) {
     elem.classList.add('validationError');
 }
@@ -31,19 +39,28 @@ function remoteClassError(elem) {
 function AddPlaceholder(elem) {
     elem.placeholder = "There isn't value";
 }
+function IsSpace(elem) {
+    let space = elem.value.split('').map(el => {
+        if (el.charCodeAt(0) == 32) {
+            console.log("Space")
+            AddClassError(elem)
+        }
+    })
+
+}
 function checkValue(elem) {
-    console.log(elem.value)
+   // console.log(elem.value)
     if (!elem.value) {
         AddClassError(elem)
         AddPlaceholder(elem)
-        console.log('Empty')
+     //   console.log('Empty')
     }
     return false
 }
 function Checklogin(elem) {
     if (elem.value) {
         if (/^[a-zA-Z1-9]+$/.test(elem.value) === false ||
-            elem.value.length < 2 || elem.value.length > 20) {
+            elem.value.length < 6 || elem.value.length > 20) {
             AddClassError(elem)
             console.log('Incorrect login');
             return false;
@@ -52,19 +69,29 @@ function Checklogin(elem) {
             return true;
         }
     }
+    IsSpace(elem)
     checkValue(elem)
 }
 function CheckPassword(elem) {
     if (elem.value) {
+       // console.log(elem.value)
+      //  console.log(/[a-z]+[0-9]+|[0-9]+[a-z]+$/gm.test(elem.value))
+        if(/[a-z]+[0-9]+|[0-9]+[a-z]+$/gm.test(elem.value) === false){
+            AddClassError(elem)
+            console.log('Incorrect password');
+            return false;
+        }
         if (elem.value.length < 6 || elem.value.length > 20) {
             AddClassError(elem)
             console.log('Incorrect password');
             return false;
         } else {
             remoteClassError(elem)
+            IsSpace(elem)
             return true;
         }
     }
+
     checkValue(elem)
 }
 function CheckEmail(elem) {
@@ -81,8 +108,9 @@ function CheckEmail(elem) {
     checkValue(elem)
 }
 function CheckConfirmPassword(elem, elemconfirm) {
-    if (elem.value != elemconfirm.value) {
+    if (elem.value != elemconfirm.value || elemconfirm.value == "") {
         AddClassError(elemconfirm)
+        AddPlaceholder(elemconfirm)
         return false;
     } else {
         remoteClassError(elemconfirm)

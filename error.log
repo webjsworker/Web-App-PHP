@@ -1541,3 +1541,69 @@ pm_winnt:notice] [pid 12204:tid 448] AH00354: Child: Starting 64 worker threads.
 [Tue Nov 29 22:39:16.937332 2022] [mpm_winnt:notice] [pid 7180:tid 428] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Tue Nov 29 22:39:18.956403 2022] [mpm_winnt:notice] [pid 12204:tid 448] AH00364: Child: All worker threads have exited.
 [Tue Nov 29 22:39:19.007394 2022] [mpm_winnt:notice] [pid 7180:tid 428] AH00430: Parent: Child process 12204 exited successfully.
+[Wed Nov 30 10:55:00.432409 2022] [mpm_winnt:notice] [pid 14708:tid 408] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Wed Nov 30 10:55:00.432409 2022] [mpm_winnt:notice] [pid 14708:tid 408] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Wed Nov 30 10:55:00.432409 2022] [core:notice] [pid 14708:tid 408] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Wed Nov 30 10:55:00.436402 2022] [mpm_winnt:notice] [pid 14708:tid 408] AH00418: Parent: Created child process 14208
+Apache server shutdown initiated...
+pm_winnt:notice] [pid 14208:tid 408] AH00354: Child: Starting 64 worker threads.
+[Wed Nov 30 10:57:15.533535 2022] [mpm_winnt:notice] [pid 14708:tid 408] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Nov 30 10:57:17.542545 2022] [mpm_winnt:notice] [pid 14208:tid 408] AH00364: Child: All worker threads have exited.
+[Wed Nov 30 10:57:17.574546 2022] [mpm_winnt:notice] [pid 14708:tid 408] AH00430: Parent: Child process 14208 exited successfully.
+[Wed Nov 30 11:01:44.638185 2022] [mpm_winnt:notice] [pid 13144:tid 404] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Wed Nov 30 11:01:44.638185 2022] [mpm_winnt:notice] [pid 13144:tid 404] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Wed Nov 30 11:01:44.638185 2022] [core:notice] [pid 13144:tid 404] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Wed Nov 30 11:01:44.643184 2022] [mpm_winnt:notice] [pid 13144:tid 404] AH00418: Parent: Created child process 13976
+[Wed Nov 30 11:01:45.194740 2022] [mpm_winnt:notice] [pid 13976:tid 424] AH00354: Child: Starting 64 worker threads.
+[Wed Dec 07 23:24:12.435616 2022] [core:warn] [pid 452:tid 404] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Dec 07 23:24:12.504625 2022] [mpm_winnt:notice] [pid 452:tid 404] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Wed Dec 07 23:24:12.504625 2022] [mpm_winnt:notice] [pid 452:tid 404] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Wed Dec 07 23:24:12.504625 2022] [core:notice] [pid 452:tid 404] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Wed Dec 07 23:24:12.511620 2022] [mpm_winnt:notice] [pid 452:tid 404] AH00418: Parent: Created child process 10908
+[Wed Dec 07 23:24:13.147616 2022] [mpm_winnt:notice] [pid 10908:tid 408] AH00354: Child: Starting 64 worker threads.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Fri Dec 09 15:11:08.056283 2022] [mpm_winnt:notice] [pid 5116:tid 184] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Fri Dec 09 15:11:08.056283 2022] [mpm_winnt:notice] [pid 5116:tid 184] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Fri Dec 09 15:11:08.056283 2022] [core:notice] [pid 5116:tid 184] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Fri Dec 09 15:11:08.056283 2022] [mpm_winnt:notice] [pid 5116:tid 184] AH00418: Parent: Created child process 4288
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Fri Dec 09 15:11:08.604284 2022] [mpm_winnt:notice] [pid 4288:tid 192] AH00354: Child: Starting 64 worker threads.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Fri Dec 09 21:00:03.585200 2022] [mpm_winnt:notice] [pid 3084:tid 120] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Fri Dec 09 21:00:03.585200 2022] [mpm_winnt:notice] [pid 3084:tid 120] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Fri Dec 09 21:00:03.585200 2022] [core:notice] [pid 3084:tid 120] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Fri Dec 09 21:00:03.616400 2022] [mpm_winnt:notice] [pid 3084:tid 120] AH00418: Parent: Created child process 3228
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Fri Dec 09 21:00:04.146800 2022] [mpm_winnt:notice] [pid 3228:tid 128] AH00354: Child: Starting 64 worker threads.
+                                                                                                                                                        Apache server shutdown initiated...
+[Wed Dec 14 23:43:09.217618 2022] [mpm_winnt:notice] [pid 4444:tid 184] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Dec 14 23:43:11.308021 2022] [mpm_winnt:notice] [pid 5320:tid 192] AH00364: Child: All worker threads have exited.
+[Wed Dec 14 23:43:11.916423 2022] [mpm_winnt:notice] [pid 4444:tid 184] AH00430: Parent: Child process 5320 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::4451:f962:cf84:9e9. Set the 'ServerName' directive globally to suppress this message
+[Thu Dec 15 11:51:30.436264 2022] [mpm_winnt:notice] [pid 2860:tid 184] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Thu Dec 15 11:51:30.436264 2022] [mpm_winnt:notice] [pid 2860:tid 184] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Thu Dec 15 11:51:30.436264 2022] [core:notice] [pid 2860:tid 184] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Thu Dec 15 11:51:30.438264 2022] [mpm_winnt:notice] [pid 2860:tid 184] AH00418: Parent: Created child process 6380
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::4451:f962:cf84:9e9. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::4451:f962:cf84:9e9. Set the 'ServerName' directive globally to suppress this message
+[Thu Dec 15 11:51:31.055299 2022] [mpm_winnt:notice] [pid 6380:tid 192] AH00354: Child: Starting 64 worker threads.
+[Thu Dec 15 12:01:39.654383 2022] [php:error] [pid 6380:tid 1000] [client ::1:49717] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:02:24.136560 2022] [php:error] [pid 6380:tid 1000] [client ::1:49779] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:02:26.955057 2022] [php:error] [pid 6380:tid 1000] [client ::1:49779] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:03:04.886854 2022] [php:error] [pid 6380:tid 992] [client ::1:49820] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:03:23.373004 2022] [php:error] [pid 6380:tid 992] [client ::1:49837] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:03:46.777771 2022] [php:error] [pid 6380:tid 1000] [client ::1:49846] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:04:37.315743 2022] [php:error] [pid 6380:tid 992] [client ::1:49890] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:05:37.754855 2022] [php:error] [pid 6380:tid 1008] [client ::1:49956] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/
+[Thu Dec 15 12:07:20.495418 2022] [php:error] [pid 6380:tid 1008] [client ::1:50048] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/index.html
+[Thu Dec 15 12:07:54.621997 2022] [php:error] [pid 6380:tid 1008] [client ::1:50085] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/index.html
+[Thu Dec 15 12:08:19.084979 2022] [php:error] [pid 6380:tid 1000] [client ::1:50096] PHP Fatal error:  Cannot redeclare checkUser() (previously declared in C:\\localhost\\controller.php:16) in C:\\localhost\\user.php on line 32, referer: http://localhost/index.html
+[Thu Dec 15 12:19:42.020359 2022] [php:error] [pid 6380:tid 1008] [client ::1:50673] PHP Parse error:  syntax error, unexpected identifier "checkUser", expecting "," or ";" in C:\\localhost\\route.php on line 21, referer: http://localhost/index.html
+[Thu Dec 15 13:02:47.969151 2022] [core:warn] [pid 7360:tid 420] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Dec 15 13:02:48.012266 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Thu Dec 15 13:02:48.012266 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Thu Dec 15 13:02:48.012266 2022] [core:notice] [pid 7360:tid 420] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Thu Dec 15 13:02:48.017268 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00418: Parent: Created child process 3220
+[Thu Dec 15 13:02:48.547535 2022] [mpm_winnt:notice] [pid 3220:tid 408] AH00354: Child: Starting 64 worker threads.

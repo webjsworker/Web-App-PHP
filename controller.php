@@ -13,4 +13,7 @@ function ExitUser()
 {
     return ExitUserService();
 }
+function checkUser($user){
+    return checkUserService($user);
+}
 ?>
