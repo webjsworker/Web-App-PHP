@@ -5393,3 +5393,8 @@
 ::1 - - [15/Dec/2022:13:17:36 +0300] "GET /index.html HTTP/1.1" 304 -
 ::1 - - [15/Dec/2022:13:17:36 +0300] "GET /src/index.js HTTP/1.1" 304 -
 ::1 - - [15/Dec/2022:13:17:46 +0300] "GET /route.php/?login=aliakseiy&password=test123 HTTP/1.1" 200 11
+::1 - - [15/Dec/2022:13:29:07 +0300] "GET /index.html HTTP/1.1" 304 -
+::1 - - [15/Dec/2022:13:29:07 +0300] "GET /src/validation.js HTTP/1.1" 304 -
+::1 - - [15/Dec/2022:13:29:07 +0300] "GET /src/index.js HTTP/1.1" 200 3211
+::1 - - [15/Dec/2022:13:29:07 +0300] "GET /style/form-desctop.css HTTP/1.1" 304 -
+::1 - - [15/Dec/2022:13:29:36 +0300] "POST /route.php HTTP/1.1" 200 20

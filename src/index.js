@@ -13,22 +13,18 @@ const CLOSE = 'Close'
 const SINGIN_CONTAINER = "singin_container"
 const SINGUP_CONTANER = "singup_container"
 
-
-
 let DisplayBlock = (elem) => {
     elem.style.display = BLOCK
 }
 let SingInClick = () => {
 
     DisplayBlock(SINGINFORM)
-
 }
 
 let SingUpClick = () => {
 
     DisplayBlock(SINGUPFORM)
 }
-
 
 let DisplayNone = (elem) => {
     elem.style.display = NONE
