@@ -5,8 +5,10 @@ if(localStorage.id === document.cookie){
 function GetAway(){
     localStorage.name = ''
     localStorage.id = ''
-    headerMenu.style.display = 'block'   
+    headerMenu.style.display = 'block' 
+    headerMenu.style.display = 'flex'  
     welcomeMesageOff()
+    
 }
 
 headerGoOut.addEventListener("click", GetAway);

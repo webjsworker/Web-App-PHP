@@ -2,6 +2,7 @@
 require("user-model.php");
 require("controller.php");
 
+
 $method = $_SERVER["REQUEST_METHOD"];
 
 switch ($method) {
@@ -17,9 +18,9 @@ switch ($method) {
     break;
   case "POST":
     $user = new User($_POST["login"], $_POST["password"], $_POST["email"], $_POST["name"]);
-   if( checkUser($user)){
-    echo json_encode("User has been created");
-   } else {
+      if( checkUser($user)){
+     getMessage();
+       } else {
      addUser($user);
    } ;
    

@@ -1606,4 +1606,90 @@ AH00558: httpd.exe: Could not reliably determine the server's fully qualified do
 [Thu Dec 15 13:02:48.012266 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
 [Thu Dec 15 13:02:48.012266 2022] [core:notice] [pid 7360:tid 420] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
 [Thu Dec 15 13:02:48.017268 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00418: Parent: Created child process 3220
-[Thu Dec 15 13:02:48.547535 2022] [mpm_winnt:notice] [pid 3220:tid 408] AH00354: Child: Starting 64 worker threads.
+Apache server shutdown initiated...
+pm_winnt:notice] [pid 3220:tid 408] AH00354: Child: Starting 64 worker threads.
+[Thu Dec 15 13:45:07.482927 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Dec 15 13:45:09.504060 2022] [mpm_winnt:notice] [pid 3220:tid 408] AH00364: Child: All worker threads have exited.
+[Thu Dec 15 13:45:09.554417 2022] [mpm_winnt:notice] [pid 7360:tid 420] AH00430: Parent: Child process 3220 exited successfully.
+[Mon Jan 09 14:53:43.217750 2023] [mpm_winnt:notice] [pid 13884:tid 292] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Mon Jan 09 14:53:43.217750 2023] [mpm_winnt:notice] [pid 13884:tid 292] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Mon Jan 09 14:53:43.218751 2023] [core:notice] [pid 13884:tid 292] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Mon Jan 09 14:53:43.222751 2023] [mpm_winnt:notice] [pid 13884:tid 292] AH00418: Parent: Created child process 11620
+[Mon Jan 09 14:53:43.814750 2023] [mpm_winnt:notice] [pid 11620:tid 412] AH00354: Child: Starting 64 worker threads.
+[Mon Jan 09 15:40:10.759811 2023] [php:warn] [pid 11620:tid 1096] [client ::1:59890] PHP Warning:  require(response): Failed to open stream: No such file or directory in C:\\localhost\\user.php on line 4, referer: http://localhost/index.html
+[Mon Jan 09 15:40:10.762815 2023] [php:error] [pid 11620:tid 1096] [client ::1:59890] PHP Fatal error:  Uncaught Error: Failed opening required 'response' (include_path='.;C:\\php\\pear') in C:\\localhost\\user.php:4\nStack trace:\n#0 C:\\localhost\\controller.php(2): require_once()\n#1 C:\\localhost\\route.php(3): require('C:\\\\localhost\\\\co...')\n#2 {main}\n  thrown in C:\\localhost\\user.php on line 4, referer: http://localhost/index.html
+[Mon Jan 09 15:40:18.671105 2023] [php:warn] [pid 11620:tid 1104] [client ::1:59891] PHP Warning:  require(response): Failed to open stream: No such file or directory in C:\\localhost\\user.php on line 4, referer: http://localhost/index.html
+[Mon Jan 09 15:40:18.671105 2023] [php:error] [pid 11620:tid 1104] [client ::1:59891] PHP Fatal error:  Uncaught Error: Failed opening required 'response' (include_path='.;C:\\php\\pear') in C:\\localhost\\user.php:4\nStack trace:\n#0 C:\\localhost\\controller.php(2): require_once()\n#1 C:\\localhost\\route.php(3): require('C:\\\\localhost\\\\co...')\n#2 {main}\n  thrown in C:\\localhost\\user.php on line 4, referer: http://localhost/index.html
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::244c:67cb:90cb:8fa6. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 10 20:48:04.468750 2023] [mpm_winnt:notice] [pid 320:tid 120] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Tue Jan 10 20:48:04.469750 2023] [mpm_winnt:notice] [pid 320:tid 120] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Tue Jan 10 20:48:04.469750 2023] [core:notice] [pid 320:tid 120] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Tue Jan 10 20:48:04.470750 2023] [mpm_winnt:notice] [pid 320:tid 120] AH00418: Parent: Created child process 5400
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::244c:67cb:90cb:8fa6. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::244c:67cb:90cb:8fa6. Set the 'ServerName' directive globally to suppress this message
+[Tue Jan 10 20:48:06.514750 2023] [mpm_winnt:notice] [pid 5400:tid 128] AH00354: Child: Starting 64 worker threads.
+[Tue Jan 10 22:23:13.532750 2023] [php:error] [pid 5400:tid 956] [client ::1:8303] PHP Parse error:  syntax error, unexpected token "echo" in C:\\localhost\\user.php on line 30, referer: http://localhost/index.html
+[Tue Jan 10 22:23:22.687750 2023] [php:error] [pid 5400:tid 952] [client ::1:8304] PHP Parse error:  syntax error, unexpected token "echo" in C:\\localhost\\user.php on line 30, referer: http://localhost/index.html
+[Tue Jan 10 22:26:55.886750 2023] [php:error] [pid 5400:tid 956] [client ::1:8454] PHP Parse error:  syntax error, unexpected token "public", expecting "," or ";" in C:\\localhost\\response.php on line 11, referer: http://localhost/index.html
+[Tue Jan 10 22:27:00.598750 2023] [php:error] [pid 5400:tid 956] [client ::1:8454] PHP Parse error:  syntax error, unexpected token "public", expecting "," or ";" in C:\\localhost\\response.php on line 11, referer: http://localhost/index.html
+[Tue Jan 10 22:36:53.441750 2023] [php:error] [pid 5400:tid 952] [client ::1:8970] PHP Fatal error:  Cannot declare class UserNotExistMessages, because the name is already in use in C:\\localhost\\response.php on line 2, referer: http://localhost/index.html
+[Tue Jan 10 22:39:01.278750 2023] [php:error] [pid 5400:tid 952] [client ::1:9090] PHP Fatal error:  Cannot declare class UserNotExistMessages, because the name is already in use in C:\\localhost\\response.php on line 2, referer: http://localhost/index.html
+[Tue Jan 10 22:42:17.445750 2023] [php:error] [pid 5400:tid 952] [client ::1:9241] PHP Fatal error:  Cannot declare class UserNotExistMessages, because the name is already in use in C:\\localhost\\response.php on line 2, referer: http://localhost/index.html
+[Tue Jan 10 22:46:57.222750 2023] [php:error] [pid 5400:tid 956] [client ::1:9500] PHP Fatal error:  Cannot declare class UserNotExistMessages, because the name is already in use in C:\\localhost\\response.php on line 2, referer: http://localhost/index.html
+[Thu Jan 12 20:07:13.062751 2023] [core:warn] [pid 9032:tid 420] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Jan 12 20:07:13.106749 2023] [mpm_winnt:notice] [pid 9032:tid 420] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Thu Jan 12 20:07:13.106749 2023] [mpm_winnt:notice] [pid 9032:tid 420] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Thu Jan 12 20:07:13.106749 2023] [core:notice] [pid 9032:tid 420] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Thu Jan 12 20:07:13.110752 2023] [mpm_winnt:notice] [pid 9032:tid 420] AH00418: Parent: Created child process 11292
+Apache server shutdown initiated...
+pm_winnt:notice] [pid 11292:tid 452] AH00354: Child: Starting 64 worker threads.
+[Thu Jan 12 23:05:21.419057 2023] [mpm_winnt:notice] [pid 9032:tid 420] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Thu Jan 12 23:05:23.438495 2023] [mpm_winnt:notice] [pid 11292:tid 452] AH00364: Child: All worker threads have exited.
+[Thu Jan 12 23:05:23.483481 2023] [mpm_winnt:notice] [pid 9032:tid 420] AH00430: Parent: Child process 11292 exited successfully.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 14 07:36:23.818600 2023] [core:warn] [pid 2064:tid 120] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jan 14 07:36:24.074600 2023] [mpm_winnt:notice] [pid 2064:tid 120] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Sat Jan 14 07:36:24.075600 2023] [mpm_winnt:notice] [pid 2064:tid 120] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Sat Jan 14 07:36:24.075600 2023] [core:notice] [pid 2064:tid 120] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Sat Jan 14 07:36:24.076600 2023] [mpm_winnt:notice] [pid 2064:tid 120] AH00418: Parent: Created child process 2780
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 14 07:36:24.384600 2023] [mpm_winnt:notice] [pid 2780:tid 128] AH00354: Child: Starting 64 worker threads.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 14 07:42:44.159600 2023] [core:warn] [pid 280:tid 120] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Jan 14 07:42:44.503800 2023] [mpm_winnt:notice] [pid 280:tid 120] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Sat Jan 14 07:42:44.503800 2023] [mpm_winnt:notice] [pid 280:tid 120] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Sat Jan 14 07:42:44.503800 2023] [core:notice] [pid 280:tid 120] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Sat Jan 14 07:42:44.503800 2023] [mpm_winnt:notice] [pid 280:tid 120] AH00418: Parent: Created child process 376
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+Apache server shutdown initiated...
+ly determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sat Jan 14 07:42:44.878200 2023] [mpm_winnt:notice] [pid 376:tid 128] AH00354: Child: Starting 64 worker threads.
+[Sat Jan 14 09:03:45.393400 2023] [php:error] [pid 376:tid 956] [client ::1:4651] PHP Fatal error:  Uncaught Error: Class "AddUserSuccssful" not found in C:\\localhost\\user.php:16\nStack trace:\n#0 C:\\localhost\\controller.php(6): addUserService(Object(User))\n#1 C:\\localhost\\route.php(26): addUser(Object(User))\n#2 {main}\n  thrown in C:\\localhost\\user.php on line 16, referer: http://localhost/index.html
+[Sat Jan 14 09:08:33.668800 2023] [php:error] [pid 376:tid 964] [client ::1:4884] PHP Fatal error:  Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\\localhost\\user.php:46\nStack trace:\n#0 C:\\localhost\\user.php(46): array_filter(NULL, Object(Closure))\n#1 C:\\localhost\\controller.php(17): checkUserService(Object(User))\n#2 C:\\localhost\\route.php(22): checkUser(Object(User))\n#3 {main}\n  thrown in C:\\localhost\\user.php on line 46, referer: http://localhost/index.html
+[Sat Jan 14 09:09:21.561800 2023] [php:error] [pid 376:tid 964] [client ::1:4926] PHP Fatal error:  Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\\localhost\\user.php:46\nStack trace:\n#0 C:\\localhost\\user.php(46): array_filter(NULL, Object(Closure))\n#1 C:\\localhost\\controller.php(17): checkUserService(Object(User))\n#2 C:\\localhost\\route.php(22): checkUser(Object(User))\n#3 {main}\n  thrown in C:\\localhost\\user.php on line 46, referer: http://localhost/index.html
+[Sat Jan 14 18:18:37.383800 2023] [mpm_winnt:notice] [pid 280:tid 120] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Sat Jan 14 18:18:39.657800 2023] [mpm_winnt:notice] [pid 376:tid 128] AH00364: Child: All worker threads have exited.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::68b1:e0a:3589:89fb. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 15 16:08:08.226000 2023] [core:warn] [pid 3576:tid 120] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Jan 15 16:08:08.502000 2023] [mpm_winnt:notice] [pid 3576:tid 120] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Sun Jan 15 16:08:08.502000 2023] [mpm_winnt:notice] [pid 3576:tid 120] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Sun Jan 15 16:08:08.502000 2023] [core:notice] [pid 3576:tid 120] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Sun Jan 15 16:08:08.522000 2023] [mpm_winnt:notice] [pid 3576:tid 120] AH00418: Parent: Created child process 1900
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::68b1:e0a:3589:89fb. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using fe80::68b1:e0a:3589:89fb. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 15 16:08:08.838000 2023] [mpm_winnt:notice] [pid 1900:tid 128] AH00354: Child: Starting 64 worker threads.
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 15 16:12:55.249600 2023] [core:warn] [pid 3572:tid 120] AH00098: pid file C:/Apache24/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sun Jan 15 16:12:55.258600 2023] [mpm_winnt:notice] [pid 3572:tid 120] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Sun Jan 15 16:12:55.258600 2023] [mpm_winnt:notice] [pid 3572:tid 120] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Sun Jan 15 16:12:55.258600 2023] [core:notice] [pid 3572:tid 120] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Sun Jan 15 16:12:55.260600 2023] [mpm_winnt:notice] [pid 3572:tid 120] AH00418: Parent: Created child process 3608
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+AH00558: httpd.exe: Could not reliably determine the server's fully qualified domain name, using ::1. Set the 'ServerName' directive globally to suppress this message
+[Sun Jan 15 16:12:55.919600 2023] [mpm_winnt:notice] [pid 3608:tid 128] AH00354: Child: Starting 64 worker threads.
+[Sun Jan 15 21:14:57.062118 2023] [mpm_winnt:notice] [pid 3180:tid 416] AH00455: Apache/2.4.54 (Win64) PHP/8.1.12 configured -- resuming normal operations
+[Sun Jan 15 21:14:57.062118 2023] [mpm_winnt:notice] [pid 3180:tid 416] AH00456: Apache Lounge VS17 Server built: Nov 10 2022 11:16:17
+[Sun Jan 15 21:14:57.062118 2023] [core:notice] [pid 3180:tid 416] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Sun Jan 15 21:14:57.067116 2023] [mpm_winnt:notice] [pid 3180:tid 416] AH00418: Parent: Created child process 10644
+[Sun Jan 15 21:14:57.635117 2023] [mpm_winnt:notice] [pid 10644:tid 416] AH00354: Child: Starting 64 worker threads.

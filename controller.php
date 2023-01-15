@@ -16,4 +16,7 @@ function ExitUser()
 function checkUser($user){
     return checkUserService($user);
 }
+function getMessage(){
+    return getUserMessage();
+}
 ?>

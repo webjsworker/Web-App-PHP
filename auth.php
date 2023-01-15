@@ -8,8 +8,8 @@ function GetAuth()
 function CloseAuth()
 {
     session_start();
-    session_destroy();
     unset($_SESSION['auth']);
     unset($_COOKIE['PHPSESSID']);
+    session_destroy();
 }
 ?>

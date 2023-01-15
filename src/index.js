@@ -52,14 +52,19 @@ async function PostUser() {
 
     });
     let result = await request.json();
-    console.log(result)
-    if(result == "User has been created"){
-      messageUpOn()  ;
-      SINGUPFORM.style.display = 'block'
-    } else {
-        messageUpOff()
-        SINGUPFORM.style.display = 'none'
+    if(result.code === '400'){
+        messageUpOn(result.status, result.code);
+        SINGUPFORM.style.display = 'block'
     } 
+    if(result.code === '200'){
+        messageUpOn(result.status, result.code);
+        SINGUPFORM.style.display = 'block'
+        setTimeout( ()=>{
+          messageUpOff()
+        SINGUPFORM.style.display = 'none'  
+        } , 2000)
+    }
+      
 }
 
 let SubmitFormUp = (event) => {
@@ -69,7 +74,7 @@ let SubmitFormUp = (event) => {
         CheckPassword(InPassword) &&
         CheckPassword(InConfirmPassword) &&
         CheckEmail(InEmail) &&
-        Checklogin(InName)) {
+        CheckName(InName)) {
         PostUser()
        // SINGUPFORM.style.display = 'none'
     }
@@ -81,15 +86,16 @@ async function GetUser() {
     let request = await fetch(`route.php/?login=${login}&password=${password}`, {
         method: 'GET',
     });
-    console.log(request)
     let result = await request.json();
-    if (result == 'not exist') {
+    //console.log(result.status)
+    if (result.code == '400') {
         MessageOn()
         return true
-    } else {
-        localStorage.name = result
+    } 
+    if(result.code == '200') {
+        localStorage.name = result.login
         localStorage.id = document.cookie
-        welcomeMesageOn("Hello " + result)
+        welcomeMesageOn("Hello " + result.login)
         MessageOff()
         SINGINFORM.style.display = 'none'
         ClearFrom()
@@ -104,6 +110,7 @@ let SubmitFormIn = (event) => {
     }
 }
 async function ExitClick() {
+       
     let request = await fetch(`route.php/`, {
         method: 'GET',
     });

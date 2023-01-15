@@ -1,6 +1,7 @@
 <?php
 require_once("db.php");
 require_once("auth.php");
+require("response.php");
 
 function ExitUserService()
 {
@@ -9,8 +10,9 @@ function ExitUserService()
 
 function addUserService($user)
 {
+  header('Content-Type: application/json; charset=utf-8');
   addUserDB($user);
-  echo json_encode('Add user succssful');
+  echo json_encode(new AddUserSuccssful);
   return;
 }
 function getUserService($userItem)
@@ -23,29 +25,31 @@ function getUserService($userItem)
   });
   GetAuth();
   if (($result)) {
-    echo json_encode($result[array_key_first($result)]['login']);
-  } else {
-    echo json_encode('not exist');
+    header('Content-Type: application/json; charset=utf-8');
+    $user = new UserExistMessages;
+    $user->login = $result[array_key_first($result)]['login'];
+      echo json_encode($user);
+    } else {
+    echo json_encode(new UserNotExistMessages);
   }
 }
 
 function checkUserService($user){
- // echo ("User has been created");
-
-
   $array = getUsers();
   $result = array_filter($array, function ($item) use ($user) {
-    if ($item['login'] == $user->{'login'} && $item['email'] == $user->{'email'}) {
+    if ($item['login'] == $user->{'login'} || $item['email'] == $user->{'email'}) {
       return true;
     }
   });
   if (($result)) {
     return true;
-    //echo json_encode("User has been created");  && $item['password'] == $user->{'password'} 
-  } else {
+    } else {
     return false;
-    //echo json_encode("User has not been created");
-  }
+    }
+}
+function getUserMessage(){
+  header('Content-Type: application/json; charset=utf-8');
+  echo json_encode(new UserHasBeenCreated);
 }
 
 ?>

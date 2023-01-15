@@ -9,6 +9,8 @@ const InConfirmPassword = inputItems[5];
 const InEmail = inputItems[6];
 const InName = inputItems[7];
 
+
+
 function ClearFrom() {
     for (const node of inputItems) {
         if (node.type != 'submit') {
@@ -23,9 +25,20 @@ function MessageOn() {
 function MessageOff() {
     Message[0].style.display = 'none'
 }
-function messageUpOn(){
+function messageUpOn(message , code){
+    if(code === '400'){
     MessageUP[0].style.display = 'block'
+    MessageUP[0].style.color = 'red'
+    MessageUP[0].innerHTML = message;
+    }
+    if(code === '200'){
+        MessageUP[0].style.display = 'block'
+        MessageUP[0].style.color = 'green'
+        MessageUP[0].innerHTML = message;
+    }
+    
 }
+
 function messageUpOff(){
     MessageUP[0].style.display = 'none'
 }
@@ -49,11 +62,9 @@ function IsSpace(elem) {
 
 }
 function checkValue(elem) {
-   // console.log(elem.value)
     if (!elem.value) {
         AddClassError(elem)
         AddPlaceholder(elem)
-     //   console.log('Empty')
     }
     return false
 }
@@ -72,10 +83,37 @@ function Checklogin(elem) {
     IsSpace(elem)
     checkValue(elem)
 }
-function CheckPassword(elem) {
+function CheckName(elem) {
+    
     if (elem.value) {
-       // console.log(elem.value)
-      //  console.log(/[a-z]+[0-9]+|[0-9]+[a-z]+$/gm.test(elem.value))
+        if (/^[a-zA-Z]+$/.test(elem.value) === false ||
+            elem.value.length < 2 || elem.value.length > 20) {
+            AddClassError(elem)
+            console.log('Incorrect name');
+            return false;
+        } else {
+            remoteClassError(elem)
+            return true;
+        }
+    }
+    IsSpace(elem)
+    checkValue(elem)
+}
+
+function CheckConfirmPasswordAgain(){
+    console.log('confirm =>'   )
+    if(inputItems[5].value){
+        CheckConfirmPassword(InPassword, InConfirmPassword)  
+    }
+    
+}
+
+function CheckPassword(elem) {
+    
+
+    CheckConfirmPasswordAgain()
+
+    if (elem.value) {
         if(/[a-z]+[0-9]+|[0-9]+[a-z]+$/gm.test(elem.value) === false){
             AddClassError(elem)
             console.log('Incorrect password');
@@ -91,9 +129,11 @@ function CheckPassword(elem) {
             return true;
         }
     }
-
     checkValue(elem)
+ 
+
 }
+
 function CheckEmail(elem) {
     if (elem.value) {
         if (/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(elem.value) === false) {
@@ -107,7 +147,7 @@ function CheckEmail(elem) {
     }
     checkValue(elem)
 }
-function CheckConfirmPassword(elem, elemconfirm) {
+function CheckConfirmPassword(elem , elemconfirm ) {
     if (elem.value != elemconfirm.value || elemconfirm.value == "") {
         AddClassError(elemconfirm)
         AddPlaceholder(elemconfirm)
@@ -124,7 +164,7 @@ InLogin.onblur = function () { Checklogin(InLogin) };
 InPassword.onblur = function () { CheckPassword(InPassword) };
 InConfirmPassword.onblur = function () { CheckConfirmPassword(InPassword, InConfirmPassword) };
 InEmail.onblur = function () { CheckEmail(InEmail) };
-InName.onblur = function () { Checklogin(InName) };
+InName.onblur = function () { CheckName(InName) };
 
 
 
