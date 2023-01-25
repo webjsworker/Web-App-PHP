@@ -25,7 +25,5 @@ class AddUserSuccssful
        public $status = 'User has been created';
        public $code = '400';
     }
-
- 
 ?>
 

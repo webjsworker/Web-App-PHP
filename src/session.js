@@ -1,6 +1,11 @@
-if(localStorage.id === document.cookie){
+
+if(localStorage.id && document.cookie){
+    if(localStorage.id === document.cookie){
     welcomeMesageOn("Hello" + localStorage.name)
 } else {welcomeMesageOff()}
+}
+
+
 
 function GetAway(){
     localStorage.name = ''

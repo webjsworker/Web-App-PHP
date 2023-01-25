@@ -10,7 +10,7 @@ function ExitUserService()
 
 function addUserService($user)
 {
-  header('Content-Type: application/json; charset=utf-8');
+ // header('Content-Type: application/json; charset=utf-8');
   addUserDB($user);
   echo json_encode(new AddUserSuccssful);
   return;
@@ -23,9 +23,9 @@ function getUserService($userItem)
       return true;
     }
   });
-  GetAuth();
+    GetAuth();
   if (($result)) {
-    header('Content-Type: application/json; charset=utf-8');
+  //  header('Content-Type: application/json; charset=utf-8');
     $user = new UserExistMessages;
     $user->login = $result[array_key_first($result)]['login'];
       echo json_encode($user);
@@ -48,8 +48,7 @@ function checkUserService($user){
     }
 }
 function getUserMessage(){
-  header('Content-Type: application/json; charset=utf-8');
+//  header('Content-Type: application/json; charset=utf-8');
   echo json_encode(new UserHasBeenCreated);
 }
-
 ?>

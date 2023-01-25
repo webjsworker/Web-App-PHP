@@ -13,6 +13,7 @@ const CLOSE = 'Close'
 const SINGIN_CONTAINER = "singin_container"
 const SINGUP_CONTANER = "singup_container"
 
+
 let DisplayBlock = (elem) => {
     elem.style.display = BLOCK
 }

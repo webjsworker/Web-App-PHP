@@ -1,5 +1,4 @@
 <?php
-
 function getUsers()
 {
     $files = file_get_contents('bd.json');

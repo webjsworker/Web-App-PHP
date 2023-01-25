@@ -8,3 +8,4 @@ Options -Indexes
     #Deny from all
    # Allow from 97.84.88.14
     </FilesMatch>
+
