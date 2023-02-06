@@ -109,13 +109,7 @@ function CheckConfirmPasswordAgain(){
 }
 
 function CheckPassword(elem) {
-    
-
     CheckConfirmPasswordAgain()
-
-  //  /[a-z]+[0-9]+|[0-9]+[a-z]+$/
-  // [^xyz]
-
     if (elem.value) {
         if(/^[a-z0-9_-]{6,24}$/gm.test(elem.value) === false){
             AddClassError(elem)

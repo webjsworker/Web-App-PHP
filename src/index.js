@@ -13,6 +13,9 @@ const CLOSE = 'Close'
 const SINGIN_CONTAINER = "singin_container"
 const SINGUP_CONTANER = "singup_container"
 
+let messages = {
+    error : "Incorrect data"
+}
 
 let DisplayBlock = (elem) => {
     elem.style.display = BLOCK
@@ -71,13 +74,24 @@ async function PostUser() {
 let SubmitFormUp = (event) => {
     event.preventDefault();
 
+    /* console.log(Checklogin(InLogin))
+    console.log(CheckPassword(InPassword))
+    console.log(CheckConfirmPassword(InPassword, InConfirmPassword))
+    console.log(CheckEmail(InEmail))
+    console.log(CheckName(InName)) */
+
+
     if (Checklogin(InLogin) &&
         CheckPassword(InPassword) &&
-        CheckPassword(InConfirmPassword) &&
+        CheckConfirmPassword(InPassword, InConfirmPassword) &&
         CheckEmail(InEmail) &&
         CheckName(InName)) {
+            MessageOff()   
         PostUser()
        // SINGUPFORM.style.display = 'none'
+    } else{
+        console.log("incorrect form date")
+        messageUpOn(messages.error , '400')
     }
 }
 async function GetUser() {
